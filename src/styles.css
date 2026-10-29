@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+/* Paleta de colores - Portal Dinámico de HR */
+:root {
+  --color-primary: #2F5597;        /* Barra lateral, botones, encabezados */
+  --color-accent: #4472C4;         /* Íconos, enlaces, elementos interactivos */
+  --color-background: #EEF3FA;     /* Fondo general de la app */
+  --color-surface: #FFFFFF;        /* Tarjetas, formularios */
+  --color-border: #B4C6E7;         /* Contornos, separadores */
+  --color-text-primary: #1F2937;   /* Títulos, datos */
+  --color-text-secondary: #6B7280; /* Etiquetas, ayudas */
+  --color-error: #C62828;          /* Mensajes de error, logout */
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  min-height: 100vh;
+}

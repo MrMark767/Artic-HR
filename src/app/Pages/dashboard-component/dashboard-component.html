@@ -1,1 +1,72 @@
-<p>dashboard-component works!</p>
+<div class="dashboard-layout">
+  <!-- Sidebar lateral -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="logo-box">
+        <img src="ArticFoxLogo.png" alt="Artic Fox Logo" class="logo-img" />
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <button type="button" class="nav-item active">
+        <span class="nav-icon" aria-hidden="true">&#9638;</span>
+        <span>Inicio</span>
+      </button>
+
+      <div class="upcoming-section">
+        <span class="upcoming-title">Próximamente:</span>
+        <div class="upcoming-item">
+          <span class="dot">&#9634;</span> Solicitudes
+        </div>
+        <div class="upcoming-item">
+          <span class="dot">&#9634;</span> Reportes
+        </div>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- Área principal de contenido -->
+  <div class="main-wrapper">
+    <!-- Barra superior -->
+    <header class="topbar">
+      <div class="user-info">
+        <h2 class="user-name">{{ user.name }}</h2>
+        <p class="user-role">{{ user.roleDescription }}</p>
+      </div>
+      <button type="button" class="logout-btn" (click)="onLogout()">
+        Logout
+      </button>
+    </header>
+
+    <!-- Contenido del Dashboard -->
+    <main class="dashboard-content">
+      <h1 class="welcome-title">Bienvenido, Ana</h1>
+
+      <div class="cards-grid">
+        <article class="info-card">
+          <h3 class="card-label">Puesto</h3>
+          <p class="card-value">{{ user.position }}</p>
+        </article>
+
+        <article class="info-card">
+          <h3 class="card-label">Departamento</h3>
+          <p class="card-value">{{ user.department }}</p>
+        </article>
+
+        <article class="info-card">
+          <h3 class="card-label">Rol</h3>
+          <p class="card-value">{{ user.role }}</p>
+        </article>
+
+        <article class="info-card">
+          <h3 class="card-label">Correo</h3>
+          <p class="card-value">{{ user.email }}</p>
+        </article>
+      </div>
+
+      <div class="quick-access">
+        <p>Acceso Rápido (próximamente)</p>
+      </div>
+    </main>
+  </div>
+</div>

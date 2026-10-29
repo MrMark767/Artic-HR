@@ -1,9 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
-  imports: [],
   selector: 'app-dashboard-component',
-  styleUrl: './dashboard-component.css',
+  imports: [],
   templateUrl: './dashboard-component.html',
+  styleUrl: './dashboard-component.css',
 })
-export class DashboardComponent {}
+export class DashboardComponent {
+  private router = inject(Router);
+
+  user = {
+    name: 'Ana García Pérez',
+    roleDescription: 'Rol: CA (Colaborador Administrativo)',
+    position: 'Supervisora de Operaciones',
+    department: 'Operaciones',
+    role: 'CA',
+    email: 'ana.garcia@empresa.com',
+  };
+
+  onLogout(): void {
+    this.router.navigate(['/login']);
+  }
+}
