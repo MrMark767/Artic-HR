@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import {Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './dashboard-component.html',
   styleUrl: './dashboard-component.css',
 })
+
 export class DashboardComponent {
   private router = inject(Router);
 

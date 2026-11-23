@@ -1,5 +1,5 @@
 <div class="dashboard-layout">
-  <!-- Sidebar lateral -->
+  <!-- Barra Lateral Izquierda -->
   <aside class="sidebar">
     <div class="sidebar-header">
       <div class="logo-box">
@@ -25,20 +25,21 @@
     </nav>
   </aside>
 
-  <!-- Área principal de contenido -->
+  <!-- Área Principal Derecha -->
   <div class="main-wrapper">
-    <!-- Barra superior -->
+    <!-- Barra Superior -->
     <header class="topbar">
       <div class="user-info">
         <h2 class="user-name">{{ user.name }}</h2>
         <p class="user-role">{{ user.roleDescription }}</p>
       </div>
+
       <button type="button" class="logout-btn" (click)="onLogout()">
         Logout
       </button>
     </header>
 
-    <!-- Contenido del Dashboard -->
+    <!-- Contenido y Tarjetas -->
     <main class="dashboard-content">
       <h1 class="welcome-title">Bienvenido, Ana</h1>
 
